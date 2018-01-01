@@ -1,0 +1,30 @@
+{
+  "name": "task-three",
+  "version": "1.0.0",
+  "main": "public/index.js",
+  "author": "xXAlphaManXx",
+  "license": "MIT",
+  "scripts": {
+    "test": "xo && ava --verbose"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "node-cache": "^4.1.1",
+    "nodemailer": "^4.4.1"
+  },
+  "devDependencies": {
+    "ava": "^0.24.0",
+    "ava-http": "^1.0.0",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "semicolon": true
+  },
+  "ava": {
+    "files": [
+      "tests/**/*-test.js"
+    ]
+  }
+}
