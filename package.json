@@ -5,6 +5,7 @@
   "author": "xXAlphaManXx",
   "license": "MIT",
   "scripts": {
+    "start": "node public/index.js",
     "test": "xo"
   },
   "dependencies": {
