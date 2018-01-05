@@ -1,15 +1,13 @@
 const express = require('express');
-const raven = require('raven');
+const Rollbar = require('rollbar');
 const bodyParser = require('body-parser');
 
 const app = express();
+const rollbar = new Rollbar('be38b3e730984500a7a6d40c588bfe3f');
 
-raven.config('https://66d9e1dd671b4e139bb7932772fafc4f@sentry.io/267471').install();
-
-app.use(raven.requestHandler());
 app.use(bodyParser.json());
 app.use(require('./../routes/web').route);
 
-app.use(raven.errorHandler());
+app.use(rollbar.errorHandler());
 
 module.exports = {app};

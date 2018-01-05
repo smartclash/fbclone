@@ -14,7 +14,7 @@
     "express": "^4.16.2",
     "node-cache": "^4.1.1",
     "nodemailer": "^4.4.1",
-    "raven": "^2.3.0"
+    "rollbar": "^2.3.5"
   },
   "devDependencies": {
     "mocha": "^4.1.0",
