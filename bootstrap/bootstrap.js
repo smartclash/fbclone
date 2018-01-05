@@ -10,4 +10,6 @@ app.use(require('./../routes/web').route);
 
 app.use(rollbar.errorHandler());
 
+rollbar.error('Some kind of weird error that you hate');
+
 module.exports = {app};
