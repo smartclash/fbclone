@@ -9,7 +9,6 @@ route.post('/auth/register', AuthController.register);
 route.post('/auth/logout', AuthController.logout);
 
 route.get('/', (req, res) => {
-	res.send('Some kind of error');
 	throw new Error('Aww shit. You broke something');
 });
 
