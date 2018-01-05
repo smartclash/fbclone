@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-raven.config('__DSN__').install();
+raven.config(process.env.SENTRY_DSN).install();
 
 app.use(raven.requestHandler());
 app.use(raven.errorHandler());
