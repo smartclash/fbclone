@@ -6,12 +6,13 @@
   "license": "MIT",
   "scripts": {
     "start": "node public/index.js",
-    "test": "xo"
+    "test": "xo && mocha"
   },
   "dependencies": {
     "axios": "^0.17.1",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
+    "express-bearer-token": "^2.1.1",
     "node-cache": "^4.1.1",
     "nodemailer": "^4.4.1",
     "rollbar": "^2.3.5"
