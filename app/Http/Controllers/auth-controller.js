@@ -1,5 +1,3 @@
-const axios = require('axios');
-const cache = require('./../../../Utils/node-cache').cache;
 const authRequestHandler = require('./../Requests/auth-requests');
 
 const login = (req, res) => {
