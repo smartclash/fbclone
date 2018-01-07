@@ -3,7 +3,7 @@ const cache = require('./../../../Utils/node-cache').cache;
 
 const userInfo = token => {
 	return new Promise((resolve, reject) => {
-		axios.get(cache.get('hasuraAuthApi'), {
+		axios.get(String(cache.get('hasuraAuthApi')) + 'user/info', {
 			headers: {
 				'Content-Type': 'application/json',
 				Authorization: 'Bearer ' + token
