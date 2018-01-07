@@ -6,7 +6,7 @@ const usersInfo = (req, res) => {
 		.catch(err => res.status(401).send({
 			type: 'error',
 			message: 'You are either not logged in or an error occured',
-			err
+			token: req.token
 		}));
 };
 
