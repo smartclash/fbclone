@@ -1,10 +1,9 @@
 const axios = require('axios');
-const cache = require('./../../../Utils/node-cache').cache;
 
 const requestLogin = (username, password) => {
 	return new Promise((resolve, reject) => {
 		axios
-			.post(cache.get('hasuraAuthApi') + 'login', {
+			.post(String(process.env.HASURA_AUTH) + 'login', {
 				provider: 'username',
 				data: {
 					username,
@@ -25,7 +24,7 @@ const requestLogin = (username, password) => {
 const requestRegister = (username, password) => {
 	return new Promise((resolve, reject) => {
 		axios
-			.post(cache.get('hasuraAuthApi') + 'signup', {
+			.post(String(process.env.HASURA_AUTH) + 'signup', {
 				provider: 'username',
 				data: {
 					username,
