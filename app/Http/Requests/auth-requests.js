@@ -24,7 +24,7 @@ const requestLogin = (username, password) => {
 const requestRegister = (username, password) => {
 	return new Promise((resolve, reject) => {
 		axios
-			.post(String(process.env.HASURA_AUTH) + 'a', {
+			.post(String(process.env.HASURA_AUTH) + 'signup', {
 				provider: 'username',
 				data: {
 					username,
