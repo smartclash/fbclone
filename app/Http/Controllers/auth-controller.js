@@ -23,7 +23,8 @@ const register = (req, res) => {
 				});
 			}
 
-			res.send(500).send({
+			console.log(err.response);
+			res.status(500).send({
 				type: 'error',
 				message: 'Unknown error. Please try again later'
 			});
