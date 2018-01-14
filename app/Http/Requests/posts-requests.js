@@ -1,15 +1,15 @@
-const axios = require('axios');
+const axios = require('axios')
 
-const createPostRequest = () => {
-
-};
+const createPostRequest = token => {
+	
+}
 
 const editPostRequest = () => {
 
-};
+}
 
 const deletePostRequest = () => {
 
-};
+}
 
-module.exports = {createPostRequest, editPostRequest, deletePostRequest};
+module.exports = {createPostRequest, editPostRequest, deletePostRequest}

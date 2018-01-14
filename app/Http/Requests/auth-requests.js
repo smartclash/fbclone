@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('axios')
 
 const requestLogin = (username, password) => {
 	return new Promise((resolve, reject) => {
@@ -17,9 +17,9 @@ const requestLogin = (username, password) => {
 					username: response.data.username
 				}
 			}))
-			.catch(err => reject(err));
-	});
-};
+			.catch(err => reject(err))
+	})
+}
 
 const requestRegister = (username, password) => {
 	return new Promise((resolve, reject) => {
@@ -32,8 +32,8 @@ const requestRegister = (username, password) => {
 				}
 			})
 			.then(response => resolve(response.data))
-			.catch(err => reject(err));
-	});
-};
+			.catch(err => reject(err))
+	})
+}
 
-module.exports = {requestLogin, requestRegister};
+module.exports = {requestLogin, requestRegister}

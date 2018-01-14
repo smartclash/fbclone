@@ -1,4 +1,4 @@
-const axios = require('axios');
+const axios = require('axios')
 
 const userInfo = token => {
 	return new Promise((resolve, reject) => {
@@ -15,11 +15,11 @@ const userInfo = token => {
 					username: data.data.username,
 					roles: data.data.hasura_roles
 				}
-			});
+			})
 		}).catch(err => {
-			return reject(err);
-		});
-	});
-};
+			return reject(err)
+		})
+	})
+}
 
-module.exports = {userInfo};
+module.exports = {userInfo}

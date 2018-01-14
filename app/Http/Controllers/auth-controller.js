@@ -1,4 +1,4 @@
-const authRequestHandler = require('./../Requests/auth-requests');
+const authRequestHandler = require('./../Requests/auth-requests')
 
 const login = (req, res) => {
 	authRequestHandler
@@ -8,8 +8,8 @@ const login = (req, res) => {
 			type: 'error',
 			message: 'Invalid credentials. Try again',
 			code: err.response.data.code
-		}));
-};
+		}))
+}
 
 const register = (req, res) => {
 	authRequestHandler
@@ -20,15 +20,15 @@ const register = (req, res) => {
 				return res.status(401).send({
 					type: 'error',
 					message: 'The user already exists. Try another username'
-				});
+				})
 			}
 
-			console.log(err.response);
+			console.log(err.response)
 			res.status(500).send({
 				type: 'error',
 				message: 'Unknown error. Please try again later'
-			});
-		});
-};
+			})
+		})
+}
 
-module.exports = {login, register};
+module.exports = {login, register}
