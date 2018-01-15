@@ -1,12 +1,12 @@
 const axios = require('axios')
 
-const requestLogin = (username, password) => {
+const requestLogin = (email, password) => {
 	return new Promise((resolve, reject) => {
 		axios
 			.post(String(process.env.HASURA_AUTH) + 'login', {
-				provider: 'username',
+				provider: 'email',
 				data: {
-					username,
+					email,
 					password
 				}
 			})
@@ -14,20 +14,20 @@ const requestLogin = (username, password) => {
 				type: 'success',
 				message: {
 					token: response.data.auth_token,
-					username: response.data.username
+					email: response.data.email
 				}
 			}))
 			.catch(err => reject(err))
 	})
 }
 
-const requestRegister = (username, password) => {
+const requestRegister = (email, password) => {
 	return new Promise((resolve, reject) => {
 		axios
 			.post(String(process.env.HASURA_AUTH) + 'signup', {
-				provider: 'username',
+				provider: 'email',
 				data: {
-					username,
+					email,
 					password
 				}
 			})

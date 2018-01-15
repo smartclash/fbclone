@@ -2,7 +2,7 @@ const authRequestHandler = require('./../Requests/auth-requests')
 
 const login = (req, res) => {
 	authRequestHandler
-		.requestLogin(req.body.username, req.body.password)
+		.requestLogin(req.body.email, req.body.password)
 		.then(response => res.status(200).send(response))
 		.catch(err => res.status(401).send({
 			type: 'error',
@@ -13,13 +13,13 @@ const login = (req, res) => {
 
 const register = (req, res) => {
 	authRequestHandler
-		.requestRegister(req.body.username, req.body.password)
+		.requestRegister(req.body.email, req.body.password)
 		.then(response => console.log(response))
 		.catch(err => {
 			if (err.response.data.code === 'user-exists') {
 				return res.status(401).send({
 					type: 'error',
-					message: 'The user already exists. Try another username'
+					message: 'This email already exists. Try another email'
 				})
 			}
 
