@@ -11,8 +11,9 @@ const userInfo = token => {
 			return resolve({
 				type: 'success',
 				message: {
+					id: data.data.hasura_id,
 					token: data.data.auth_token,
-					username: data.data.username,
+					username: data.data.email,
 					roles: data.data.hasura_roles
 				}
 			})
